@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background-color: black;
+}
+.headpatti, p {
+    background-color: rgb(22, 68, 218);
+    height: 1.4cm;
+    position: sticky;
+    color: #fff;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5cm;
+}
+
+
+.container {
+    width:100%;
+    min-height: 100vh;
+    background:linear-gradient(13deg, #90918e, #575755);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+.list{
+    background-color: #edeef0;
+}
+.todo {
+    width: 100%;
+    max-width:540px ;
+    background: transparent;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+   justify-content: center;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #f02ba4;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul {
+    background-color: transparent;
+   
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px; /* Corrected padding */
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    position: relative; /* Add this to position the ::before element */
+}
+
+ul li::before {
+    content: '';
+    position: absolute; /* Changed from sticky to absolute */
+    left: 10px; /* Adjust to place correctly */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('uncheck.png'); /* Make sure the path is correct */
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked::before {
+    background-image: url('check.png'); /* Make sure the path is correct */
+}
+
+
+ul li.checked {
+    color: rgba(171, 160, 160, 0.79);
+    text-decoration: line-through;
+}
+
+ul li span {
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    font-size:22px ;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
